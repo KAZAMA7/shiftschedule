@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @associate.name %>
+</p>
+
+<p>
+  <strong>Irc nick:</strong>
+  <%= @associate.irc_nick %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @associate.mail_id %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @associate.phone %>
+</p>
+
+<p>
+  <strong>Manager:</strong>
+  <%= @associate.manager %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @associate.group %>
+</p>
+
+<%= link_to 'Edit', edit_associate_path(@associate) %> |
+<%= link_to 'Back', associates_path %>

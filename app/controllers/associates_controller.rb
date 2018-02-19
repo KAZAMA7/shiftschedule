@@ -69,6 +69,6 @@ class AssociatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def associate_params
-      params.require(:associate).permit(:name, :irc_nick, :mail_id, :phone, :manager, :group)
+      params.require(:associate).permit(:name, :irc_nick, :mail_id, :phone, :manager, :roles, :group)
     end
 end

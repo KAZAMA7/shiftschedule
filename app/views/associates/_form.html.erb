@@ -33,7 +33,8 @@
 
   <div class="field">
     <%= form.label :manager %>
-    <%= form.text_field :manager, id: :associate_manager %>
+    <%= form.select(:manager, options_for_select(Associate.where(:roles => 'AM').collect{|m| [m.name, m.id]})) %>
+    <%#= form.text_field :manager, id: :associate_manager %>
   </div>
 
   <div class="field">

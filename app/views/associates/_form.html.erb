@@ -33,18 +33,18 @@
 
   <div class="field">
     <%= form.label :manager %>
-    <%= form.select(:manager, options_for_select(Associate.where(:roles => 'AM').collect{|m| [m.name, m.id]})) %>
-    <%#= form.text_field :manager, id: :associate_manager %>
+    <%= form.select(:manager_id, options_for_select(Role.find_by_role('AM').associates.collect{|x| [x.name, x.id]}
+)) %>
   </div>
 
   <div class="field">
     <%= form.label :roles %>
-    <%= form.text_field :roles, id: :associate_roles %>
+    <%= form.select(:role_id, options_for_select(Role.all.collect{|m| [m.role, m.id]})) %>
   </div>
 
   <div class="field">
     <%= form.label :group %>
-    <%= form.text_field :group, id: :associate_group %>
+    <%= form.select(:group_id, options_for_select(Group.all.collect{|m| [m.sbr, m.id]})) %>
   </div>
 
   <div class="actions">
